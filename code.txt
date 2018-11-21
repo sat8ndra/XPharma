@@ -1,0 +1,19 @@
+DO CLEANUP IN MAIN.PRG
+
+
+**COPYING FILES
+SET SAFETY OFF
+COPY FILE e:\BACK\SPT16VO1.DBF TO e:\XPHARMA\data\SPT.dbf
+SET SAFETY ON
+
+
+***************
+INSERT INTO OrdersArchive (order_id, order_date, ship_name) ;
+
+   SELECT order_id, order_date, ship_name FROM Orders ;
+
+      WHERE order_date >= (DATE()-30)
+
+*****************
+INSERT INTO warehouse (p_code, p_name, p_packi);
+SELECT p_code, p_name, p_packing FROM pms WHERE p_code = 

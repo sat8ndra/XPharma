@@ -1,0 +1,8 @@
+**in main.prg
+**setup any menus
+SET MARK OF BAR 10 OF _MVIEW TO .T.
+
+
+** Turn off the toolbar
+
+HIDE WINDOW standard
